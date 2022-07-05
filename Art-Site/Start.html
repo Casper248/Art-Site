@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monika Schacherl</title>
+   
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="logo-container">
+            <a href="../Art-Site/Start.html">
+                <img src="images/Signature_black_cuted.png" height="100px" width="auto">
+            </a> 
+        </div>
+        <ul class="item-list">
+            <li class="nav-element" onclick="markSelectedSite(0)"><a class="nav-element-link" href="../Art-Site/Gallerie.html">Gallerie</a></li>
+            <li class="nav-element" onclick="markSelectedSite(1)"><a class="nav-element-link" href="../Art-Site/Creativ.html">Kreatives</a></li>
+            <li class="nav-element" onclick="markSelectedSite(2)"><a class="nav-element-link" href="../Art-Site/I-am-Interested.html">Ich bin interessiert</a></li>
+            <li class="nav-element" onclick="markSelectedSite(3)"><a class="nav-element-link" href="../Art-Site/About-the-Artist.html">Über mich</a></li>
+        </ul>
+    </nav>
+    <main class="maincontent-main">
+        <div class="maincontent-middle">
+            <div class="slide-show">
+                <div class="slide">
+                    <img src="images/IMG-20210422-WA0000.jpg" class="slide-picture">
+                    <div class="slide-textarea">
+                        <h1 class="picture-text-array">Werkraum</h1> <br>
+                        <h1 class="picture-text-array" style="margin-right: 50px; width: 300px;">für kreatives</h1> <br>
+                        <h1 class="picture-text-array" style="margin-left: 120px;">Gestalten</h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/Book-art.jpg" class="slide-picture">
+                </div>
+                <div class="slide">
+                    <img src="images/20200622_151343.jpg" class="slide-picture">
+                    
+                </div>
+                <a class="slide-arrow arrow-left" onclick="switchSlide(-1)"><span>&#10094;</span></a>
+                <a class="slide-arrow arrow-right" onclick="switchSlide(1)"><span>&#10095;</span></a>
+                <ol class="slider-kebap">
+                    <li class="kebap-dot" onclick="goToPicture(0)">&#8226;</li>
+                    <li class="kebap-dot" onclick="goToPicture(1)">&#8226;</li>
+                    <li class="kebap-dot" onclick="goToPicture(2)">&#8226;</li>
+                </ol>
+            </div>
+            <div class="art-theme01">
+                <img src="images/Black-shirt-printed.png">
+                    <p>Du möchtest dein Lieblingsmotiv immer dabei haben? <br>
+                        Kein Problem! <br><br>
+                        Hier kommst du zu meinem Partner <br>
+                        <a href="https://www.spreadshop.com/de/partner-produkt-sortiment/produkte/m%C3%A4nner/t-shirts">Spreadshop</a></p>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <ol class="footer-list">
+            <li class="list-item"><a href="../Art-Site/Impressum.html">Impressum</a></li>
+            <li class="list-item"><i class="icon"></i><a href="https://www.instagram.com/">Instagram</a></li>
+        </ol>
+    </div>
+    <script src="JS/logic.js"></script>
+    <script src="JS/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
