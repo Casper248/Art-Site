@@ -1,0 +1,12 @@
+{
+    "name": "felix/art-site",
+    "authors": [
+        {
+            "name": "Felix Werner",
+            "email": "felix-werner@hotmail.de"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "6.0"
+    }
+}
