@@ -5,36 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monika Schacherl</title>
+    <script type="module" src="https://smtpjs.com/v3/smtp.js"></script>
     
 </head>
 <body>
     <nav class="nav-bar">
         <div class="logo-container">
-            <a href="C:/Users/felix/Desktop/Art-Site/Start.html">
+            <a href="../Art-Site/index.html">
                 <img src="images/Signature_black_cuted.png" height="100px" width="auto">
             </a> 
         </div>
         <ul class="item-list">
-            <li class="nav-element" onclick="markSelectedSite(0)"><a class="nav-element-link" href="../Art-Site/Gallerie.html">Gallerie</a></li>
-            <li class="nav-element" onclick="markSelectedSite(1)"><a class="nav-element-link" href="../Art-Site/Creativ.html">Kreatives</a></li>
-            <li class="nav-element" onclick="markSelectedSite(2)"><a class="nav-element-link" href="../Art-Site/I-am-Interested.html">Ich bin interessiert</a></li>
-            <li class="nav-element" onclick="markSelectedSite(3)"><a class="nav-element-link" href="../Art-Site/About-the-Artist.html">Über mich</a></li>
+            <li class="nav-element"><a class="nav-element-link" href="../Art-Site/gallery.html">Gallerie</a></li>
+            <li class="nav-element"><a class="nav-element-link" href="../Art-Site/creativ.html">Kreatives</a></li>
+            <li class="nav-element"><a class="nav-element-link highlighted" href="../Art-Site/i-am-interested.html">Ich bin interessiert</a></li>
+            <li class="nav-element"><a class="nav-element-link" href="../Art-Site/about-the-artist.html">Über mich</a></li>
         </ul>
     </nav>
     <main class="maincontent-interested">
-        <div class="email-form">
-            <div class="text-header">
-                <h1>Du hast interesse?</h1>
-                <br>
-                <h2>Dann schreib mir eine Email</h2>
+        <form action="./backend/index.php" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="email-form">
+    
+                <div class="text-header">
+                    <h1>Du hast interesse?</h1>
+                    <br>
+                    <h2>Dann schreib mir eine Email</h2>
+                </div>
+                <div id="input-form">
+                    <input id="input-email" type="text" name="email" placeholder="Deine-Emailadresse@Email.de"></input>
+                    <br>
+                    <textarea id="input-description" name="description" cols="30" rows="10" placeholder="Platz für deine Anfrage"></textarea>
+                    <button class="button-send-mail">Anfrage Senden</button>
+                </div>
             </div>
-            <div id="input-form">
-                <input id="input-email" type="text" placeholder="Deine-Emailadresse@Email.de"></input>
-                <br>
-                <textarea id="input-discription" name="input-discription" cols="30" rows="10" placeholder="Platz für deine Anfrage"></textarea>
-                <button class="button-send-mail">Anfrage Senden</button>
-            </div>
-        </div>
+        </form>
         
     </main>
     <div class="footer">

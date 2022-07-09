@@ -1,15 +1,17 @@
 //Variables
 var actualIndex = 0; //Show Picutre #1 on Start Page Slider
-var siteindex = 0;
 const kebapDot = document.getElementsByClassName("kebap-dot"); // Kebap-Dots on Slider 
 const slides = document.getElementsByClassName("slide"); // Array of the Slider Images 
-var sitenumber = document.getElementsByClassName('nav-element-link');
 var emailsender = document.getElementById('input-email');
-var emailbody = document.getElementById('input-discription')
+var emailbody = document.getElementById('input-discription');
+console.log(kebapDot);
+if(kebapDot.length>0){
+    kebapDot[0].classList.add("active-dot"); //Add first element of the array another class
+}
 
-
-kebapDot[0].classList.add("active-dot"); //Add first element of the array another class
-slides[0].classList.add("active-picture");
+if(slides.length>0){
+    slides[0].classList.add("active-picture");
+}
 
 
 /* Function to switch the pictures in the slider using the arrows inside the slider*/
@@ -24,7 +26,7 @@ function switchSlide(count){ //count is given in arrow "-1" or "1"
     }
 
     goToPicture(newIndex); 
-}
+};
 
 /*Function to show the next or previous picture*/
 function goToPicture(newIndex){
@@ -35,15 +37,19 @@ function goToPicture(newIndex){
 
     kebapDot[actualIndex].classList.add("active-dot");
     slides[actualIndex].classList.add("active-picture");
+};
+
+
+
+function isEmailAdressValid(emailadress){
+    var emailpattern =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(emailadress.match(emailpattern)){
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 
-function markSelectedSite (picturenumber) {
-    var actualnumber = picturenumber;
-    sitenumber[actualnumber].classList.add('selected');
-}
 
-
-function sendEmail(emailsender,emailbody) {
-    RegExp('')
-}
